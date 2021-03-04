@@ -1,5 +1,4 @@
 import xml.etree.ElementTree as ET
-from pathlib import Path
 
 user = input('Enter Username')
 data =''

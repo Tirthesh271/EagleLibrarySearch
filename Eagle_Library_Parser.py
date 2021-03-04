@@ -1,5 +1,6 @@
 import xml.etree.ElementTree as ET
 import os
+=======
 
 def findComponent(filePath, file):
     tree = ET.parse(filePath)
@@ -48,3 +49,8 @@ for rootdir, subdirs, files in os.walk(path):
             try:
                 findComponent(filePath,file)
             except:pass
+=======
+#Find component from description
+for i in root.iter('package'):
+    if inp.lower() in i.attrib['name'].lower() or inp.lower() in str(i[0].text).lower():
+        print(i.attrib['name'])
